@@ -1,35 +1,19 @@
-/* @flow */
-
 import React from 'react';
-
-import type {
-  NavigationRouter,
-  NavigationRoute,
-  NavigationNavigator,
-  NavigationNavigatorProps,
-} from '../TypeDefinition';
 
 /**
  * Creates a navigator based on a router and a view that renders the screens.
  */
-const createNavigator = (router: NavigationRouter) =>
-  (View: NavigationNavigator<*>) => {
+export default function createNavigator(router, routeConfigs, navigatorConfig) {
+  return NavigationView => {
     class Navigator extends React.Component {
-      props: NavigationNavigatorProps;
-
       static router = router;
+      static navigationOptions = null;
 
       render() {
-        return (
-          <View
-            {...this.props}
-            router={router}
-          />
-        );
+        return <NavigationView {...this.props} router={router} />;
       }
     }
 
     return Navigator;
   };
-
-export default createNavigator;
+}
