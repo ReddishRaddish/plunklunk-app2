@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {StackNavigator} from 'react-navigation';
 import home from './Screens/home';
+import NUX1 from './Screens/NUX1';
 
 export default class App extends React.Component {
   render() {
@@ -13,7 +14,9 @@ export default class App extends React.Component {
 } 
 
 const AppStackNavigator = StackNavigator({
+  NUX1: {screen: NUX1},
   home: {screen: home},
+
 });
 
 const styles = StyleSheet.create({
