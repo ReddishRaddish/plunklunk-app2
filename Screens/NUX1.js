@@ -14,10 +14,10 @@ export default class createAccount extends React.Component {
                 <Text style = {{color: '#b3b3b3', fontSize: 18, paddingLeft: 30, paddingRight:30, textAlign:'center'}}> We don't post anything to Facebook. </Text>
             </View>
             <View style={{paddingTop: 5, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-              <Button style={styles.button}>
+              <Button onPress={() => this.props.navigation.navigate('NUX2') }    style={styles.button}>
                 <Text style={{color:'white', fontSize: 30, fontWeight: 'bold'}}>    f   </Text>
                 <Text style={{color: 'white', fontSize: 22}}> Sign up with Facebook    </Text>
-
+                    
               </Button>
             </View>
             <View style={{paddingTop: 20, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
