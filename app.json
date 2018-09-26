@@ -1,7 +1,4 @@
 {
-  "expo": {
-    "sdkVersion": "27.0.0"
-  },
-  "name": "plunklunkapp2",
-  "displayName": "Pink Link"
+  "name": "plunklunk-app2",
+  "displayName": "plunklunk-app2"
 }
