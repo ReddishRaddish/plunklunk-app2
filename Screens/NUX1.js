@@ -5,6 +5,21 @@ import {Button} from 'native-base';
 
 
 export default class createAccount extends React.Component {
+
+  async logInWithFacebook () {
+        
+        const {type, token} = await Expo.Facebook.logInWithReadPermissionsAsync('464099380740457', {permissions: ['public_profile']})
+        
+        if (type == 'success'){   
+            const credential = firebase.auth.FacebookAuthProvider.credential(token)
+            firebase.auth().signInWithCredential(credential).catch((error) => {
+                console.log(error)
+            })
+            
+        }
+        
+  }
+    
   render() {
       return(
           <View>
@@ -14,7 +29,7 @@ export default class createAccount extends React.Component {
                 <Text style = {{color: '#b3b3b3', fontSize: 18, paddingLeft: 30, paddingRight:30, textAlign:'center'}}> We don't post anything to Facebook. </Text>
             </View>
             <View style={{paddingTop: 5, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-              <Button onPress={() => this.props.navigation.navigate('NUX2') }    style={styles.button}>
+              <Button onPress={() => this.logInWithFacebook() }    style={styles.button}>
                 <Text style={{color:'white', fontSize: 30, fontWeight: 'bold'}}>    f   </Text>
                 <Text style={{color: 'white', fontSize: 22}}> Sign up with Facebook    </Text>
                     
