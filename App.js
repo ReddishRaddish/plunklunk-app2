@@ -10,6 +10,16 @@ import Accept from './Screens/Accept';
 import sending from './Screens/sending';
 import NUX2 from './Screens/NUX2';
 
+const firebaseConfig = {
+    apiKey: "AIzaSyB4yALj75vJ8HKNrJGxBMKxdAOoEbjDHNM",
+    authDomain: "plunklunk-app.firebaseapp.com",
+    databaseURL: "https://plunklunk-app.firebaseio.com",
+    projectId: "plunklunk-app",
+    storageBucket: "plunklunk-app.appspot.com",
+};
+
+firebase.initializeApp(firebaseConfig);
+
 export default class App extends React.Component {
   render() {
     return (

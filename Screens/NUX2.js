@@ -13,6 +13,7 @@ export default class NUX2 extends React.Component {
                 password:'',
             })
         }
+                                                                            
 
      render() {
             return(
@@ -41,7 +42,8 @@ export default class NUX2 extends React.Component {
                     <View style={{paddingTop: 5, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
                         <Button style={styles.button}
                         full
-                        rounded          
+                        rounded   
+                        onPress = {() => this.logInWithFacebook() }
                         >
                         <Text style={{color: 'white'}}> Sign In</Text>
                         </Button>
