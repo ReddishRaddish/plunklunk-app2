@@ -1,0 +1,3 @@
+rootProject.name = 'plunklunkapp2'
+
+include ':app'
