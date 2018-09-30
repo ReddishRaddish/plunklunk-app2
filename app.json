@@ -1,4 +1,5 @@
 {
   "name": "plunklunk-app2",
-  "displayName": "plunklunk-app2"
+  "displayName": "plunklunk-app2",
+  "expo": {"sdkVersion" : "18.0.0" }
 }
